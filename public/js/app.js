@@ -40139,7 +40139,7 @@ window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
  */
 
 try {
-  window.Popper = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module '@popper.js/core'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()))["default"];
+  window.Popper = __webpack_require__(/*! @popperjs/core */ "./node_modules/@popperjs/core/lib/index.js")["default"];
 
   __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
 } catch (e) {}
@@ -40255,8 +40255,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\Boolean\photolog\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\Boolean\photolog\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Sonia\Boolean\Esercizi\Photolog\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Sonia\Boolean\Esercizi\Photolog\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
