@@ -5098,11 +5098,40 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      myMessage: "PhotoLog",
+      postsList: []
+    };
+  },
+  methods: {
+    getData: function getData() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/posts").then(function (resp) {
+        _this.postsList = resp.data;
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.getData();
+  }
+});
 
 /***/ }),
 
@@ -27827,7 +27856,19 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" })
+  return _c("div", [
+    _c("div", { staticClass: "container" }, [
+      _c("h1", [_vm._v(_vm._s(_vm.myMessage.toUpperCase()))]),
+      _vm._v(" "),
+      _c(
+        "ul",
+        _vm._l(_vm.postsList, function (post) {
+          return _c("li", { key: post.id }, [_vm._v(_vm._s(post.title))])
+        }),
+        0
+      ),
+    ]),
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
