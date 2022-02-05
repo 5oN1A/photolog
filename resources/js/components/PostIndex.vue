@@ -2,16 +2,29 @@
   <div>
     <div class="container">
       <h1>{{ myMessage.toUpperCase() }}</h1>
-      <ul>
-        <li v-for="post in postsList" :key="post.id">{{ post.title }}</li>
-      </ul>
+      <div class="row">
+        <div class="col-6">
+          <template>
+            <PostCard
+              v-for="post in postsList"
+              :key="post.id"
+              :post="post"
+            ></PostCard>
+          </template>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
+        
+
 <script>
 import axios from "axios";
+import PostCard from "../components/PostCard.vue";
+
 export default {
+  components: { PostCard },
   data() {
     return {
       myMessage: "PhotoLog",
