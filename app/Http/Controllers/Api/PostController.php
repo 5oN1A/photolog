@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     public function index(Request $request)
     {
-        $postList = Post::with('tags')->with('user')->all();
+        $postList = Post::with('tags')->with('user')->get();
 
         return response()->json($postList);
     }
