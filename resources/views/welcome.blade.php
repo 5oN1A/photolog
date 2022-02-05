@@ -82,7 +82,7 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
+                <div class="title m-b-md ms-5">
                     Laravel
                 </div>
 
