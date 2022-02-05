@@ -5146,8 +5146,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -27935,12 +27933,10 @@ var render = function () {
         _c(
           "div",
           { staticClass: "col-6" },
-          [
-            _vm._l(_vm.postsList, function (post) {
-              return _c("PostCard", { key: post.id, attrs: { post: post } })
-            }),
-          ],
-          2
+          _vm._l(_vm.postsList, function (post) {
+            return _c("PostCard", { key: post.id, attrs: { post: post } })
+          }),
+          1
         ),
       ]),
     ]),

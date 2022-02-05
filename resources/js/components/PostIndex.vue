@@ -4,13 +4,11 @@
       <h1>{{ myMessage.toUpperCase() }}</h1>
       <div class="row">
         <div class="col-6">
-          <template>
-            <PostCard
-              v-for="post in postsList"
-              :key="post.id"
-              :post="post"
-            ></PostCard>
-          </template>
+          <PostCard
+            v-for="post in postsList"
+            :key="post.id"
+            :post="post"
+          ></PostCard>
         </div>
       </div>
     </div>
